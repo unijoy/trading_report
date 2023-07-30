@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quant Report</title>
+    <!-- Bootstrap CSS CDN -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="../templates/css/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="static/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Plotly JS -->
+    <!--    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+    <script src="../templates/js/plotly-latest.min.js"></script>
+    <!-- Our Custom JS -->
+    <script charset="utf-8" src="static/app.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1>Trading Backtest Report</h1>
+    </div>
+    <hr>
+    {% for key, value in my_dict.items() %}
+        <div class="row"><h5>{{key}}</h5></div>
+        {{ value }}
+        <br>
+    {% endfor %}
+</div>
+
+<!--    <script src="https://unpkg.com/@popperjs/core@2"></script>-->
+<!--    <script src="https://unpkg.com/tippy.js@6"></script>-->
+    <script src="../templates/js/unpkg.com_@popperjs_core@2.11.8_dist_umd_popper.min.js"></script>
+    <script src="../templates/js/unpkg.com_tippy.js@6.3.7_dist_tippy-bundle.umd.min.js"></script>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      tippy('#myButton', {
+        content: 'My tooltip!',
+      });
+    </script>
+</body>
+</html>
